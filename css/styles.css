@@ -1,1 +1,59 @@
 /* developer styles go here */
+h2 {
+    padding: 1rem;
+}
+
+.horizontal-content {
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+    /* removes the scroll in FireFox */
+    scrollbar-width: none;
+    height: 237px;
+    height: calc(205.7px + 2rem);
+}
+
+.horizontal-content::-webkit-scrollbar {
+    background: transparent;
+    width: 0;
+}
+
+.horizontal-content > div {
+    flex: 0 0 330px;
+    /* width: 330px; */
+    height: 187px;
+    background-color: #3f1917;
+    border-radius: 3px;
+    margin: 1rem 0.5rem;
+}
+
+.horizontal-content > div:hover,
+.horizontal-content > div:active {
+    flex: 0 0 346.5px;
+    /* width: 330px; */
+    height: 205.7px;
+}
+
+.parallax-image {
+    background-image: url(../img/movie.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 400px;
+    background-attachment: fixed;
+}
+
+.parallax-image h2 {
+    color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+    .horizontal-content {
+        scrollbar-width: unset;
+    }
+ 
+    .horizontal-content::-webkit-scrollbar {
+        background: gray;
+        width: unset;
+    }
+}
